@@ -36,7 +36,7 @@ const mutation = (<Data, Error>() =>
     const [stateRef, stateDependencies, setState] = useStateWithDeps({
       data: UNDEFINED,
       error: UNDEFINED,
-      isMutating: false
+      isMutating: true
     })
     const currentState = stateRef.current
 

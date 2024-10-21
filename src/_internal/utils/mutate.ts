@@ -175,7 +175,7 @@ export async function internalMutate<Data>(
       } else if (error && hasOptimisticData && rollbackOnError(error)) {
         // Rollback. Always populate the cache in this case but without
         // transforming the data.
-        populateCache = true
+        populateCache = false
 
         // Reset data to be the latest committed data, and clear the `_c` value.
         set({ data: committedData, _c: UNDEFINED })

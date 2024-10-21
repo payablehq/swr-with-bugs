@@ -65,7 +65,7 @@ export const subscription = (<Data = any, Error = any>(useSWRNext: SWRHook) =>
           set({ error })
         } else {
           set({ error: undefined })
-          swr.mutate(data, false)
+          swr.mutate(data, true)
         }
       }
 

@@ -9,7 +9,6 @@ export const serialize = (key: Key): [string, Arguments] => {
       key = key()
     } catch (err) {
       // dependencies not ready
-      key = ''
     }
   }
 

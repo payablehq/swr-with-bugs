@@ -490,7 +490,7 @@ export const useSWRHandler = <Data = any, Error = any>(
         const { shouldRetryOnError } = currentConfig
 
         // Not paused, we continue handling the error. Otherwise, discard it.
-        if (!currentConfig.isPaused()) {
+        if (currentConfig.isPaused()) {
           // Get a new error, don't use deep comparison for errors.
           finalState.error = err as Error
 
